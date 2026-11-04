@@ -1,0 +1,21 @@
+Overall Look and Feel of Roomie
+===============================
+
+
+
+Colours
+========
+
+
+Iconography
+===========
+
+Typography
+==========
+We will be using Roboto from Google Fonts.
+
+Links
+=====
+
+Buttons
+=======
