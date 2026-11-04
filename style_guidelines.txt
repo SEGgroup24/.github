@@ -15,13 +15,19 @@ Primary Blue - HEX #636d77
 
 Iconography
 ===========
+- UOBoost name with an arrow going up, inspired by uOttawa but with our own style
 
 Typography
 ==========
-We will be using Roboto from Google Fonts.
+- Arial, sans-serif
+- Titles: big and bold, garnet color
+- Normal text: 16px
 
 Links
 =====
 
 Buttons
 =======
+- Main button: garnet background, white text
+- Second button: white background, garnet border
+
