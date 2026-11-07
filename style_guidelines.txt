@@ -10,7 +10,7 @@ Charcoal Grey - HEX #2d2d2c
 Polar Grey - HEX #f2f2f2
 Primary Warm Grey - HEX #80746c
 Primary Blue - HEX #636d77
-(Optional if necessary): Dark Red - HEX #8B0000
+
 
 Iconography
 ===========
