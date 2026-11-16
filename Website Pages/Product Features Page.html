@@ -1,6 +1,229 @@
-<!DOCTYPE html> 
-<html>
-    <head>
-        <title>Product Features</title>
-    </head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Our Team · uO Boost</title>
+  <style>
+    :root {
+      --burgundy: #7F1426;
+      --burgundy-dark: #5A0E1B;
+      --burgundy-tint: #F4E6E8;
+      --grey: #80746C;
+      --graphite: #2D2D2C;
+      --smoke: #F2F2F2;
+      --slate: #636D77;
+      --line: #DEDBD9;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--smoke); color: var(--graphite); font: 16px/1.6 "IBM Plex Sans", system-ui, sans-serif; overflow-x: hidden; }
+    a { color: inherit; }
+
+    
+    .topbar { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 28px; padding: 14px 28px; background: #fff; border-bottom: 1px solid var(--line); }
+    .topbar::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: linear-gradient(90deg, var(--burgundy) 22%, transparent 70%); }
+    .brand { display: flex; align-items: center; gap: 8px; text-decoration: none; font: 800 1.45rem "Montserrat", sans-serif; letter-spacing: -.02em; }
+    .brand .uo { color: var(--burgundy); }
+    .nav { display: flex; gap: 6px; }
+    .nav a { padding: 7px 14px; border-radius: 999px; text-decoration: none; color: var(--slate); font-weight: 500; }
+    .nav a:hover { color: var(--graphite); background: var(--smoke); }
+    .nav a.on { color: var(--burgundy); background: var(--burgundy-tint); }
+
+    
+    .hero { position: relative; overflow: hidden; padding: 120px 24px 130px; text-align: center; background: linear-gradient(180deg, #fff, var(--smoke)); }
+    .hero svg { position: absolute; pointer-events: none; }
+    .hero .swoosh { top: 0; left: 0; width: min(42vw, 520px); }
+    .hero .network { bottom: 0; right: 0; width: min(38vw, 480px); }
+    .hero .streaks { top: 26px; right: 5vw; width: min(24vw, 290px); }
+    .hero-inner { position: relative; z-index: 2; max-width: 720px; margin: 0 auto; }
+    .eyebrow { margin: 0 0 12px; color: var(--burgundy); font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 0; font: 800 clamp(2rem, 4.4vw, 3.2rem)/1.08 "Montserrat", sans-serif; letter-spacing: -.025em; }
+    .rule { display: block; width: 56px; height: 4px; margin: 18px auto; border-radius: 4px; background: linear-gradient(90deg, var(--burgundy), var(--grey)); }
+    .lede { margin: 0; color: var(--slate); font-size: 1.1rem; }
+
+    
+    .buttons { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .btn { display: inline-block; padding: 12px 24px; border: 2px solid var(--burgundy); border-radius: 10px; background: var(--burgundy); color: #fff; font-weight: 600; text-decoration: none; }
+    .btn:hover { background: var(--burgundy-dark); border-color: var(--burgundy-dark); }
+    .btn.ghost { background: #fff; color: var(--burgundy); }
+    .btn.ghost:hover { background: var(--burgundy-tint); }
+    .btn.light { background: #fff; color: var(--burgundy); border-color: #fff; }
+    .btn.light:hover { background: var(--burgundy-tint); border-color: var(--burgundy-tint); }
+
+    
+    .section { max-width: 1050px; margin: 0 auto; padding: 70px 24px; }
+    .band { background: #fff; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .section-head { margin-bottom: 36px; text-align: center; }
+    .section-head h2 { margin: 0 0 8px; font: 800 2rem "Montserrat", sans-serif; letter-spacing: -.02em; }
+    .section-head p { margin: 0; color: var(--slate); }
+    .grid { display: grid; gap: 20px; }
+    .cols-2 { grid-template-columns: repeat(2, 1fr); }
+    .cols-3 { grid-template-columns: repeat(3, 1fr); }
+    .cols-4 { grid-template-columns: repeat(4, 1fr); }
+    .card { position: relative; overflow: hidden; padding: 28px; background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 6px 20px rgba(45,45,44,.06); }
+    .card h3 { margin: 0 0 8px; color: var(--burgundy); font: 700 1.25rem "Montserrat", sans-serif; }
+    .card p { margin: 0 0 12px; }
+    .card p:last-child { margin-bottom: 0; }
+    .icon { display: grid; place-items: center; width: 56px; height: 56px; margin-bottom: 16px; border-radius: 50%; color: #fff;
+      background: linear-gradient(140deg, var(--burgundy), var(--grey)); box-shadow: 0 0 0 4px var(--smoke), 0 0 0 5px var(--line); }
+    .card:nth-child(even) .icon { background: linear-gradient(140deg, var(--graphite), var(--slate)); }
+    .more { color: var(--burgundy); font-weight: 600; text-decoration: none; }
+    .more:hover { text-decoration: underline; }
+    .note { color: var(--slate); font-size: .9rem; text-align: center; }
+
+    
+    .cta { padding: 70px 24px; text-align: center; color: #fff; background: linear-gradient(120deg, var(--burgundy-dark), var(--burgundy)); }
+    .cta h2 { margin: 0 0 10px; font: 800 2rem "Montserrat", sans-serif; }
+    .cta p { margin: 0 0 24px; opacity: .85; }
+
+    
+    .account { display: flex; gap: 8px; margin-left: auto; }
+    .account a { padding: 8px 16px; border: 2px solid var(--burgundy); border-radius: 10px; font-weight: 600; text-decoration: none; white-space: nowrap; }
+    .account .signin { background: #fff; color: var(--burgundy); }
+    .account .signin:hover { background: var(--burgundy-tint); }
+    .account .signup { background: var(--burgundy); color: #fff; }
+    .account .signup:hover { background: var(--burgundy-dark); border-color: var(--burgundy-dark); }
+
+    
+    footer { padding: 40px 24px; background: var(--graphite); color: rgba(255,255,255,.6); text-align: center; font-size: .85rem; }
+    footer strong { display: block; margin-bottom: 4px; color: #fff; font: 800 1.2rem "Montserrat", sans-serif; }
+
+    
+    .ticks { margin: 14px 0 0; padding: 0; list-style: none; }
+    .ticks li { position: relative; margin-bottom: 6px; padding-left: 24px; }
+    .ticks li::before { content: "✓"; position: absolute; left: 0; color: var(--burgundy); font-weight: 700; }
+    .card::after { content: ""; position: absolute; right: -64px; top: -64px; width: 150px; height: 150px; border: 16px solid var(--burgundy-tint); border-radius: 50%; }
+    .card > * { position: relative; z-index: 1; }
+
+    @media (max-width: 950px) {
+      .cols-3, .cols-4 { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 700px) {
+      .topbar { flex-wrap: wrap; gap: 10px; padding: 12px 16px; }
+      .nav { order: 3; width: 100%; }
+      .account a { padding: 6px 12px; font-size: .9rem; }
+      .hero { padding: 120px 16px 150px; }
+      .hero .streaks { display: none; }
+      .hero .swoosh { width: 48vw; }
+      .hero .network { width: 58vw; }
+      .cols-2, .cols-3, .cols-4 { grid-template-columns: 1fr; }
+      .section { padding: 50px 16px; }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="topbar">
+    <a class="brand" href="Home Page.html">
+      <svg width="34" height="28" viewBox="0 0 34 28" aria-hidden="true"><path d="M17 2 1 9l16 7 16-7Z" fill="#7F1426"/><path d="M7 12v7c0 2 4.5 4 10 4s10-2 10-4v-7l-10 4.5Z" fill="#7F1426"/><path d="M3 10v8" stroke="#7F1426" stroke-width="1.6"/><circle cx="3" cy="19" r="1.6" fill="#7F1426"/></svg>
+      <span><span class="uo">uO</span>Boost</span>
+    </a>
+    <nav class="nav">
+      <a href="Home Page.html">Home</a>
+      <a href="Product Features Page.html" class="on">Features</a>
+      <a href="Pricing Page.html">Pricing</a>
+      <a href="Team Page.html">Team</a>
+    </nav>
+    <div class="account">
+      <a class="signin" href="#">Sign in</a>
+      <a class="signup" href="#">Sign up</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    
+    <svg class="swoosh" viewBox="0 0 700 460" aria-hidden="true">
+      <path d="M0 0H560C470 70 360 110 250 190C160 255 90 330 0 360Z" fill="#7F1426"/>
+      <path d="M0 0H400C330 45 250 85 180 140C120 188 64 222 0 240Z" fill="#A33447" opacity=".45"/>
+      <path d="M0 300C120 262 205 180 300 122S480 36 610 0" fill="none" stroke="#fff" stroke-width="3"/>
+      <circle cx="470" cy="94" r="11" fill="#7F1426"/><circle cx="545" cy="150" r="6" fill="#7F1426"/>
+    </svg>
+    
+    <svg class="streaks" viewBox="0 0 420 320" aria-hidden="true">
+      <defs><linearGradient id="st" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#7F1426" stop-opacity="0"/><stop offset="1" stop-color="#7F1426"/></linearGradient></defs>
+      <path d="M30 300L338 68" stroke="url(#st)" stroke-width="16" stroke-linecap="round"/>
+      <path d="M150 312L360 152" stroke="url(#st)" stroke-width="9" stroke-linecap="round"/>
+      <polygon points="378,38 318,50 356,100" fill="#7F1426"/><polygon points="384,134 346,140 370,170" fill="#7F1426"/>
+    </svg>
+    
+    <svg class="network" viewBox="0 0 560 400" aria-hidden="true">
+      <path d="M560 40C470 110 400 150 330 230C270 300 180 360 40 400H560Z" fill="#7F1426"/>
+      <path d="M560 150C500 190 450 230 410 290C380 335 330 375 260 400H560Z" fill="#A33447" opacity=".35"/>
+      <g stroke="#fff" stroke-width="1.4" opacity=".6">
+        <line x1="330" y1="335" x2="402" y2="252"/><line x1="402" y1="252" x2="472" y2="302"/><line x1="472" y1="302" x2="522" y2="205"/>
+        <line x1="472" y1="302" x2="442" y2="372"/><line x1="442" y1="372" x2="515" y2="362"/><line x1="402" y1="252" x2="470" y2="140"/>
+      </g>
+      <g fill="#fff"><circle cx="330" cy="335" r="7"/><circle cx="402" cy="252" r="5"/><circle cx="472" cy="302" r="7"/><circle cx="522" cy="205" r="5"/><circle cx="442" cy="372" r="7"/><circle cx="515" cy="362" r="5"/><circle cx="470" cy="140" r="7"/></g>
+    </svg>
+
+    <div class="hero-inner">
+      <p class="eyebrow">What uO Boost does</p>
+      <h1>Product features</h1>
+      <span class="rule"></span>
+      <p class="lede">Four tools that help you find the right help and study with the right people.</p>
+    </div>
+  </section>
+
+  <main class="section">
+    <div class="grid cols-2">
+      <article class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5.5 5.5"/></svg></div>
+        <h3>Find a tutor</h3>
+        <p>Search for tutors by course and get matched with the ones that fit your schedule, budget and learning style.</p>
+        <ul class="ticks">
+          <li>Filter by course code, like CSI 2110</li>
+          <li>See each tutor's grade in the course</li>
+          <li>Matched to your free hours</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9Z"/></svg></div>
+        <h3>Rating and reviews</h3>
+        <p>Every tutor has a star rating and reviews from students they've helped, so you know who's reliable.</p>
+        <ul class="ticks">
+          <li>1 to 5 star ratings</li>
+          <li>Written reviews after each session</li>
+          <li>Top-rated tutors shown first</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h3M8 17h6"/></svg></div>
+        <h3>Study sessions</h3>
+        <p>Book a session with a tutor or your group, pick a time everyone is free and reserve a room on campus.</p>
+        <ul class="ticks">
+          <li>Shared weekly availability</li>
+          <li>Rooms in Morisset, CRX, STEM and more</li>
+          <li>Reminders before each session</li>
+        </ul>
+      </article>
+
+      <article class="card">
+        <div class="icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9.5" r="2.6"/><path d="M3 19.5c.6-3.3 3-5.2 6-5.2s5.4 1.9 6 5.2"/><path d="M15 14.6c.6-.3 1.3-.4 2-.4 2.3 0 4 1.6 4.5 4.6"/></svg></div>
+        <h3>Study groups</h3>
+        <p>Join a study group for your course or start your own, then invite classmates with matching schedules.</p>
+        <ul class="ticks">
+          <li>Groups for every course</li>
+          <li>Matched by courses and free time</li>
+          <li>Choose your group size</li>
+        </ul>
+      </article>
+    </div>
+    <div class="buttons">
+      <a class="btn" href="#">Get started</a>
+    </div>
+  </main>
+
+  <section class="cta">
+    <h2>See what tutoring costs</h2>
+    <p>Tutor prices are clear and you pay for everything in one place.</p>
+    <a class="btn light" href="Pricing Page.html">View pricing</a>
+  </section>
+
+  <footer>
+    <strong>uO Boost</strong>
+    A uOttawa student project · not an official University of Ottawa service
+  </footer>
+
+</body>
 </html>
