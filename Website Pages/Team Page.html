@@ -1,77 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Our Team · uO Boost</title>
-  <style>
-    :root {
-      --burgundy: #7F1426;
-      --burgundy-dark: #5A0E1B;
-      --burgundy-tint: #F4E6E8;
-      --grey: #80746C;
-      --graphite: #2D2D2C;
-      --smoke: #F2F2F2;
-      --slate: #636D77;
-      --line: #DEDBD9;
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; background: var(--smoke); color: var(--graphite); font: 16px/1.6 "IBM Plex Sans", system-ui, sans-serif; overflow-x: hidden; }
-    a { color: inherit; }
-
-    /* top bar */
-    .topbar { position: sticky; top: 0; z-index: 10; display: flex; align-items: center; gap: 28px; padding: 14px 28px; background: #fff; border-bottom: 1px solid var(--line); }
-    .topbar::after { content: ""; position: absolute; left: 0; right: 0; bottom: -1px; height: 3px; background: linear-gradient(90deg, var(--burgundy) 22%, transparent 70%); }
-    .brand { display: flex; align-items: center; gap: 8px; text-decoration: none; font: 800 1.45rem "Montserrat", sans-serif; letter-spacing: -.02em; }
-    .brand .uo { color: var(--burgundy); }
-    .nav { display: flex; gap: 6px; }
-    .nav a { padding: 7px 14px; border-radius: 999px; text-decoration: none; color: var(--slate); font-weight: 500; }
-    .nav a:hover { color: var(--graphite); background: var(--smoke); }
-    .nav a.on { color: var(--burgundy); background: var(--burgundy-tint); }
-
-    /* hero banner */
-    .hero { position: relative; overflow: hidden; padding: 120px 24px 130px; text-align: center; background: linear-gradient(180deg, #fff, var(--smoke)); }
-    .hero svg { position: absolute; pointer-events: none; }
-    .hero .swoosh { top: 0; left: 0; width: min(42vw, 520px); }
-    .hero .network { bottom: 0; right: 0; width: min(38vw, 480px); }
-    .hero .streaks { top: 26px; right: 5vw; width: min(24vw, 290px); }
-    .hero-inner { position: relative; z-index: 2; max-width: 720px; margin: 0 auto; }
-    .eyebrow { margin: 0 0 12px; color: var(--burgundy); font-size: .75rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; }
-    h1 { margin: 0; font: 800 clamp(2rem, 4.4vw, 3.2rem)/1.08 "Montserrat", sans-serif; letter-spacing: -.025em; }
-    .rule { display: block; width: 56px; height: 4px; margin: 18px auto; border-radius: 4px; background: linear-gradient(90deg, var(--burgundy), var(--grey)); }
-    .lede { margin: 0; color: var(--slate); font-size: 1.1rem; }
-
-    /* team cards */
-    .team { display: grid; gap: 20px; max-width: 1050px; margin: 0 auto; padding: 70px 24px; }
-    .person { position: relative; overflow: hidden; display: flex; gap: 36px; align-items: center; padding: 28px; background: #fff; border: 1px solid var(--line); border-radius: 14px; box-shadow: 0 6px 20px rgba(45,45,44,.06); }
-    .person::after { content: ""; position: absolute; right: -64px; top: -64px; width: 170px; height: 170px; border: 18px solid var(--burgundy-tint); border-radius: 50%; }
-    .portrait { flex: none; display: grid; place-items: center; width: 150px; height: 150px; border-radius: 50%; color: #fff; font: 800 2.6rem "Montserrat", sans-serif;
-      background: linear-gradient(140deg, var(--burgundy), var(--grey)); box-shadow: 0 0 0 6px var(--smoke), 0 0 0 7px var(--line); }
-    .person:nth-child(even) .portrait { background: linear-gradient(140deg, var(--graphite), var(--slate)); }
-    .person h2 { margin: 0 0 10px; color: var(--burgundy); font: 700 1.9rem "Montserrat", sans-serif; }
-    .person p { margin: 0 0 14px; }
-    .socials { display: flex; align-items: center; gap: 8px; }
-    .socials a { display: inline-flex; color: var(--graphite); font: 800 1rem Arial, sans-serif; text-decoration: none; }
-    .socials a:hover { color: var(--burgundy); }
-    .socials span { color: var(--line); }
-
-    /* footer */
-    footer { padding: 40px 24px; background: var(--graphite); color: rgba(255,255,255,.6); text-align: center; font-size: .85rem; }
-    footer strong { display: block; margin-bottom: 4px; color: #fff; font: 800 1.2rem "Montserrat", sans-serif; }
-
-    @media (max-width: 700px) {
-      .topbar { flex-wrap: wrap; gap: 10px; padding: 12px 16px; }
-      .hero { padding: 120px 16px 150px; }
-      .hero .streaks { display: none; }
-      .hero .swoosh { width: 48vw; }
-      .hero .network { width: 58vw; }
-      .person { flex-direction: column; text-align: center; gap: 16px; }
-      .portrait { width: 120px; height: 120px; font-size: 2.1rem; }
-      .socials { justify-content: center; }
-      .person::after { display: none; }
-    }
-  </style>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body>
+<body id="team-page">
 
   <header class="topbar">
     <a class="brand" href="#">
