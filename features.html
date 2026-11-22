@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Features · uOBoost</title>
   <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
-<body id="home-page">
+<body id="features-page">
 
   <header class="topbar">
     <a class="brand" href="index.html">
@@ -12,30 +15,33 @@
       <span><span class="uo">uO</span>Boost</span>
     </a>
     <nav class="nav">
-      <a href="index.html" class="on">Home</a>
-      <a href="Product Features Page.html">Features</a>
-      <a href="Pricing Page.html">Pricing</a>
-      <a href="Team Page.html">Team</a>
+      <a href="index.html">Home</a>
+      <a href="features.html" class="on">Features</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="team.html">Team</a>
     </nav>
     <div class="account">
-      <a class="signin" href="#">Sign in</a>
-      <a class="signup" href="#">Sign up</a>
+      <a class="signin" href="#signin">Sign in</a>
+      <a class="signup" href="#signup">Sign up</a>
     </div>
   </header>
 
   <section class="hero">
+    
     <svg class="swoosh" viewBox="0 0 700 460" aria-hidden="true">
       <path d="M0 0H560C470 70 360 110 250 190C160 255 90 330 0 360Z" fill="#7F1426"/>
       <path d="M0 0H400C330 45 250 85 180 140C120 188 64 222 0 240Z" fill="#A33447" opacity=".45"/>
       <path d="M0 300C120 262 205 180 300 122S480 36 610 0" fill="none" stroke="#fff" stroke-width="3"/>
       <circle cx="470" cy="94" r="11" fill="#7F1426"/><circle cx="545" cy="150" r="6" fill="#7F1426"/>
     </svg>
+    
     <svg class="streaks" viewBox="0 0 420 320" aria-hidden="true">
       <defs><linearGradient id="st" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#7F1426" stop-opacity="0"/><stop offset="1" stop-color="#7F1426"/></linearGradient></defs>
       <path d="M30 300L338 68" stroke="url(#st)" stroke-width="16" stroke-linecap="round"/>
       <path d="M150 312L360 152" stroke="url(#st)" stroke-width="9" stroke-linecap="round"/>
       <polygon points="378,38 318,50 356,100" fill="#7F1426"/><polygon points="384,134 346,140 370,170" fill="#7F1426"/>
     </svg>
+    
     <svg class="network" viewBox="0 0 560 400" aria-hidden="true">
       <path d="M560 40C470 110 400 150 330 230C270 300 180 360 40 400H560Z" fill="#7F1426"/>
       <path d="M560 150C500 190 450 230 410 290C380 335 330 375 260 400H560Z" fill="#A33447" opacity=".35"/>
@@ -47,87 +53,68 @@
     </svg>
 
     <div class="hero-inner">
-      <p class="eyebrow">For uOttawa students</p>
-      <h1><span class="uO">uO</span>Boost</h1>
+      <p class="eyebrow">What uO Boost does</p>
+      <h1>Product features</h1>
       <span class="rule"></span>
-      <p class="lede">Find a tutor, join a study group and book study sessions — all in one place, built for uOttawa students.</p>
-      <div class="buttons">
-        <a class="btn" href="#">Sign up free</a>
-        <a class="btn ghost" href="Product Features Page.html">See the features</a>
-      </div>
+      <p class="lede">Four tools that help you find the right help and study with the right people.</p>
     </div>
   </section>
 
-  <main>
-  <section class="section">
-    <div class="section-head">
-      <h2>Our services</h2>
-      <p>Everything you need to do better in your courses.</p>
-    </div>
-    <div class="grid cols-4">
+  <main class="section">
+    <div class="grid cols-2">
       <article class="card">
-        <div class="icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 5.5C5.5 4 8.5 4 12 6c3.5-2 6.5-2 9-.5V19c-2.5-1.5-5.5-1.5-9 .5-3.5-2-6.5-2-9-.5Z"/><path d="M12 6v13.5"/></svg></div>
-        <h3>Tutoring</h3>
-        <p>Get one-on-one help from a uOttawa student who has already aced the course you're stuck on.</p>
-        <a class="more" href="Product Features Page.html">Learn more →</a>
+        <div class="icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5.5 5.5"/></svg></div>
+        <h3>Find a tutor</h3>
+        <p>Search for tutors by course and get matched with the ones that fit your schedule, budget and learning style.</p>
+        <ul class="ticks">
+          <li>Filter by course code, like CSI 2110</li>
+          <li>See each tutor's grade in the course</li>
+          <li>Matched to your free hours</li>
+        </ul>
       </article>
 
       <article class="card">
-        <div class="icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4.5 20c.8-4 3.8-6 7.5-6s6.7 2 7.5 6"/></svg></div>
-        <h3>Tutors</h3>
-        <p>Browse tutor profiles with the courses they teach, the grade they got and their star rating.</p>
-        <a class="more" href="Product Features Page.html">Learn more →</a>
+        <div class="icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3.5 2.6 5.3 5.9.9-4.3 4.1 1 5.8-5.2-2.7-5.2 2.7 1-5.8-4.3-4.1 5.9-.9Z"/></svg></div>
+        <h3>Rating and reviews</h3>
+        <p>Every tutor has a star rating and reviews from students they've helped, so you know who's reliable.</p>
+        <ul class="ticks">
+          <li>1 to 5 star ratings</li>
+          <li>Written reviews after each session</li>
+          <li>Top-rated tutors shown first</li>
+        </ul>
       </article>
 
       <article class="card">
         <div class="icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4M8 14h3M8 17h6"/></svg></div>
         <h3>Study sessions</h3>
-        <p>Pick a time that works for everyone and book a room on campus, from Morisset to STEM.</p>
-        <a class="more" href="Product Features Page.html">Learn more →</a>
+        <p>Book a session with a tutor or your group, pick a time everyone is free and reserve a room on campus.</p>
+        <ul class="ticks">
+          <li>Shared weekly availability</li>
+          <li>Rooms in Morisset, CRX, STEM and more</li>
+          <li>Reminders before each session</li>
+        </ul>
       </article>
 
       <article class="card">
         <div class="icon"><svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="9" cy="8" r="3.2"/><circle cx="17" cy="9.5" r="2.6"/><path d="M3 19.5c.6-3.3 3-5.2 6-5.2s5.4 1.9 6 5.2"/><path d="M15 14.6c.6-.3 1.3-.4 2-.4 2.3 0 4 1.6 4.5 4.6"/></svg></div>
         <h3>Study groups</h3>
-        <p>Join or start a group for any of your courses, matched by shared classes and free time.</p>
-        <a class="more" href="Product Features Page.html">Learn more →</a>
+        <p>Join a study group for your course or start your own, then invite classmates with matching schedules.</p>
+        <ul class="ticks">
+          <li>Groups for every course</li>
+          <li>Matched by courses and free time</li>
+          <li>Choose your group size</li>
+        </ul>
       </article>
     </div>
-  </section>
-
-  <div class="band">
-  <section class="section">
-    <div class="section-head">
-      <h2>How it works</h2>
-      <p>Three steps from signing up to studying smarter.</p>
+    <div class="buttons">
+      <a class="btn" href="#signup">Get started</a>
     </div>
-    <div class="grid cols-3">
-      <article class="card">
-        <div class="num">1</div>
-        <h3>Sign up</h3>
-        <p>Create an account with your uOttawa email in under a minute.</p>
-      </article>
-
-      <article class="card">
-        <div class="num">2</div>
-        <h3>Add your courses</h3>
-        <p>Tell us what you're taking and when you're free each week.</p>
-      </article>
-
-      <article class="card">
-        <div class="num">3</div>
-        <h3>Get matched</h3>
-        <p>We suggest tutors, study groups and session times that fit you.</p>
-      </article>
-    </div>
-  </section>
-  </div>
   </main>
 
   <section class="cta">
-    <h2>Ready to boost your grades?</h2>
-    <p>Joining is free for every uOttawa student.</p>
-    <a class="btn light" href="#">Create your account</a>
+    <h2>See what tutoring costs</h2>
+    <p>Tutor prices are clear and you pay for everything in one place.</p>
+    <a class="btn light" href="pricing.html">View pricing</a>
   </section>
 
   <footer>
@@ -135,5 +122,6 @@
     A uOttawa student project · not an official University of Ottawa service
   </footer>
 
+  <script src="popups.js?v=2"></script>
 </body>
 </html>

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Our Team · uO Boost</title>
-   <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing · uOBoost</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body id="pricing-page">
@@ -14,13 +16,13 @@
     </a>
     <nav class="nav">
       <a href="index.html">Home</a>
-      <a href="Product Features Page.html">Features</a>
-      <a href="Pricing Page.html" class="on">Pricing</a>
-      <a href="Team Page.html">Team</a>
+      <a href="features.html">Features</a>
+      <a href="pricing.html" class="on">Pricing</a>
+      <a href="team.html">Team</a>
     </nav>
     <div class="account">
-      <a class="signin" href="#">Sign in</a>
-      <a class="signup" href="#">Sign up</a>
+      <a class="signin" href="#signin">Sign in</a>
+      <a class="signup" href="#signup">Sign up</a>
     </div>
   </header>
 
@@ -65,7 +67,7 @@
         <h3>Study groups and study sessions are free</h3>
         <p>Matching, groups and booking rooms cost nothing. You only pay when you book a tutor.</p>
       </div>
-      <a class="btn" href="#">Sign up free</a>
+      <a class="btn" href="#signup">Sign up free</a>
     </article>
   </section>
 
@@ -131,7 +133,7 @@
         </div>
         <p><span class="stars">★★★★★</span> <strong>4.9</strong> <span class="meta">(38 reviews)</span></p>
         <p class="rate">$35 <span>/ hour</span></p>
-        <a class="btn ghost" href="#">Book a session</a>
+        <a class="btn ghost" href="#book" data-tutor="Maya L.">Book a session</a>
       </article>
 
       <article class="card tutor">
@@ -144,7 +146,7 @@
         </div>
         <p><span class="stars">★★★★☆</span> <strong>4.6</strong> <span class="meta">(21 reviews)</span></p>
         <p class="rate">$30 <span>/ hour</span></p>
-        <a class="btn ghost" href="#">Book a session</a>
+        <a class="btn ghost" href="#book" data-tutor="Omar K.">Book a session</a>
       </article>
 
       <article class="card tutor">
@@ -157,7 +159,7 @@
         </div>
         <p><span class="stars">★★★★☆</span> <strong>4.2</strong> <span class="meta">(9 reviews)</span></p>
         <p class="rate">$25 <span>/ hour</span></p>
-        <a class="btn ghost" href="#">Book a session</a>
+        <a class="btn ghost" href="#book" data-tutor="Chloé T.">Book a session</a>
       </article>
     </div>
     <p class="note" style="margin-top: 20px;">Sample profiles for the demo — not real tutors.</p>
@@ -216,7 +218,7 @@
   <section class="cta">
     <h2>Find your tutor today</h2>
     <p>Sign up free and see tutors for your courses.</p>
-    <a class="btn light" href="#">Get started</a>
+    <a class="btn light" href="#signup">Get started</a>
   </section>
 
   <footer>
@@ -224,5 +226,6 @@
     A uOttawa student project · not an official University of Ottawa service
   </footer>
 
+  <script src="popups.js?v=2"></script>
 </body>
 </html>
